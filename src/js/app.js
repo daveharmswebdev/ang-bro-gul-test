@@ -7,6 +7,7 @@ let app = angular.module('app', ['ngRoute']);
 // this where the browserification happens
 require('./controller');
 require('./factory');
+require('./service');
 
 app.config(function($routeProvider) {
 

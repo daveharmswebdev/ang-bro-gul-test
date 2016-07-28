@@ -9,15 +9,27 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "angular-mocks": "^1.5.7",
+    "brfs": "^1.4.3",
     "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.9",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
+    "karma": "^1.1.1",
+    "karma-browserify": "^5.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-cli": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-spec-reporter": "0.0.26",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
@@ -26,5 +38,8 @@
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
     "jquery": "^3.1.0"
+  },
+  "browserify-shim": {
+    "external": "global:External"
   }
 }

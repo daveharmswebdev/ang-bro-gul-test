@@ -10,6 +10,7 @@ let buffer = require('vinyl-buffer');
 let gutil = require('gulp-util');
 let sourcemaps = require('gulp-sourcemaps');
 let sass = require('gulp-sass');
+let Server = require('karma').Server;
 
 let handleError = function(task) {
   return function(err) {
@@ -31,7 +32,7 @@ let handleError = function(task) {
 gulp.task('lint', function() {
   return gulp
     .src([
-      'gulpfile.js',
+      // 'gulpfile.js',
       'src/js/**/*.js',
       'test/**/*.js'
     ])
@@ -75,8 +76,23 @@ gulp.task('browserify', bundle);
 
 gulp.task('watch', function() {
   gulp.watch(['gulpfile.js', 'src/js/**/*.js', 'test/**/*.js'], ['lint']);
-
   gutil.log(gutil.colors.bgGreen('Watching for changes...'));
+  return Server.start({
+    configFile: __dirname + '/karma.conf.js'
+  });
 });
+
+/*
+  Karma section
+  */
+
+// gulp.task('test', function (done) {
+//   new Server({
+//     configFile: __dirname + '/karma.conf.js',
+//     singleRun: true
+//   }, function() {
+//         done();
+//   }).start();
+// });
 
 gulp.task('default', ['lint', 'watch'], bundle);

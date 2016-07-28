@@ -1,5 +1,5 @@
 {
-  "predef": [ "document", "jQuery", "$", "console", "angular", "when" ],
+  "predef": [ "document", "jQuery", "$", "console", "angular", "when", "require" ],
   "esversion": 6,
   "globalstrict": true,
   "browserify": true,
@@ -13,7 +13,8 @@
   	"afterEach": false,
     "jasmine": false,
     "app": false,
-    "notify": false
+    "notify": false,
+    "require": false
   },
   "jasmine": true
 }
