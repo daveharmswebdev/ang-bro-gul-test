@@ -37,7 +37,6 @@ module.exports = function(config) {
       // 'src/js/controller/*.js': ['browserify']
     },
 
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
@@ -51,7 +50,6 @@ module.exports = function(config) {
     //     showSpecTiming: false // print the time elapsed for each spec
     //   },
     //   plugins: ["karma-spec-reporter"],
-
     // web server port
     port: 9876,
 
@@ -73,7 +71,7 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
-
+    // you can define custom flags
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,

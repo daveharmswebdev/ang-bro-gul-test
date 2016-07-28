@@ -11,9 +11,21 @@ module.exports = function() {
 
   let setTestArray = name => testArray.push(name);
 
+  let getSome = (arg) => 5 * arg;
+
+  let addArray = function(arr) {
+    let sum = 0;
+    for (let x = 0; x < arr.length; x++) {
+        sum += arr[x];
+    }
+    return sum;
+  };
+
   return {
     getTestArray,
-    setTestArray
+    setTestArray,
+    getSome,
+    addArray
   };
 
 };
