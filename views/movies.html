@@ -1,0 +1,7 @@
+<div>
+  <input type="text" placeholder="Star Wars" ng-model="query" >
+  <button ng-click="search()">Search</button>
+  <ul>
+    <li ng-repeat="movie in movies">{{movie.Title}}</li>
+  </ul>
+</div>
