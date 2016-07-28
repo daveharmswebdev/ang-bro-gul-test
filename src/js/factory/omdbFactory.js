@@ -1,5 +1,7 @@
 'use strict';
 
+
+// omdbFactory, passed into MoviesController
 let movies;
 let currentBoard = '';
 
