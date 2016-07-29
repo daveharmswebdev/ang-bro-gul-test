@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function($scope, TestFactory, TestService) {
+module.exports = function($scope, DataFactory, TestFactory, TestService) {
   $scope.message = "Angular Works!!! And I am so happy";
   $scope.message2 = "A lot of work tomorrow";
   console.log($scope.message);
@@ -18,4 +18,6 @@ module.exports = function($scope, TestFactory, TestService) {
     console.log('testName', $scope.name);
     TestFactory.setTestArray($scope.name);
   };
+
+  DataFactory.getStuff();
 };
